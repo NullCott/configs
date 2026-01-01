@@ -5,9 +5,16 @@ set expandtab
 set autoindent
 set number
 set hlsearch
-set ruler                                                                                             " Colorear comentarios de verde (modo terminal)
-highlight Comment ctermfg=green
+set ruler    
+
+
+call plug#begin("~/.vim/plugged")
+
+Plug 'erichdongubler/vim-sublime-monokai'
+
+call plug#end()
 
 set termguicolors
-highlight Normal guibg=#000000 ctermbg=0
-highlight NonText guibg=#000000 ctermbg=0
+set t_Co=256
+colorscheme sublimemonokai
+
